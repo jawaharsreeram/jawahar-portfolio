@@ -86,11 +86,15 @@ body{
 
 .logo{
 
-    font-size:34px;
+    font-size:36px;
 
-    font-weight:700;
+    font-weight:800;
 
     font-family:"Space Grotesk",sans-serif;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
 
     transition:.4s ease;
 
@@ -111,12 +115,58 @@ body{
 
 .name{
 
-    font-size:18px;
+    display:flex;
 
-    color:#d1d5db;
+    align-items:center;
+
+    gap:6px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:20px;
+
+}
+.first-name{
+
+    font-weight:300;
+
+    color:#e5e7eb;
+
+    letter-spacing:.3px;
 
 }
 
+.last-name{
+
+    font-weight:700;
+
+    color:#1ea672;
+
+    letter-spacing:.3px;
+
+    text-shadow:
+        0 0 8px rgba(30,166,114,.45),
+        0 0 18px rgba(30,166,114,.25);
+
+    transition:.35s ease;
+
+}
+
+.brand:hover .last-name{
+
+    text-shadow:
+        0 0 12px rgba(30,166,114,.8),
+        0 0 28px rgba(30,166,114,.5);
+
+}
+
+.brand:hover .last-name{
+
+    text-shadow:
+        0 0 12px rgba(30,166,114,.8),
+        0 0 28px rgba(30,166,114,.5);
+
+}
 .hero-content{
 
     display:flex;
@@ -205,12 +255,30 @@ body{
 }
 
 .left-panel p{
+
     margin:8px 0;
-    color:#9ca3af;
-    letter-spacing:0.5px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#d1d5db;
+
+    letter-spacing:.8px;
+
+    line-height:1.7;
+
+    transition:.3s ease;
+
 }
 
+.left-panel p:hover{
 
+    color:#1ea672;
+
+    transform:translateX(5px);
+
+}
 .right-panel{
 
     width:55%;
@@ -284,6 +352,8 @@ body{
     );
 
     background-size:250%;
+
+    background-clip:text;
 
     -webkit-background-clip:text;
 
@@ -2074,7 +2144,7 @@ body::after{
 
     font-family:"Space Grotesk",sans-serif;
 
-    font-size:100px;
+    font-size:60px;
 
     font-weight:700;
 
@@ -2088,7 +2158,7 @@ body::after{
         #1ea672
     );
 
-
+    background-clip:text;
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
