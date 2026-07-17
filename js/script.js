@@ -176,3 +176,84 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+
+
+/* ==========================================
+   MY WORK ACCORDION
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const categories = document.querySelectorAll(".work-category");
+
+    categories.forEach(category => {
+
+        const header = category.querySelector(".category-header");
+
+        header.addEventListener("click", () => {
+
+            const isActive = category.classList.contains("active");
+
+            // Close every category
+            categories.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+            // Open the selected category
+            if (!isActive) {
+
+                category.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ==========================================
+   AUTO PROJECT COUNTER
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const categories = document.querySelectorAll(".work-category");
+
+    categories.forEach(category => {
+
+        const counter = category.querySelector(".category-count");
+
+        const projects = category.querySelectorAll(".project-card");
+
+        const comingSoon = category.querySelector(".coming-soon-card");
+
+        if (projects.length > 0) {
+
+            counter.textContent =
+                projects.length + (projects.length === 1 ? " Project" : " Projects");
+
+        }
+
+        else if (comingSoon) {
+
+            if (category.querySelector("h3").textContent.includes("Digital")) {
+
+                counter.textContent = "Coming Soon";
+
+            }
+
+            else if (category.querySelector("h3").textContent.includes("Video")) {
+
+                counter.textContent = "Future Videos";
+
+            }
+
+        }
+
+    });
+
+});
